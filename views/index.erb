@@ -29,14 +29,24 @@
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Surname</th>
+    <th>Имя</th>
+    <th>Фамилия</th>
+    <th>Пасспорт</th>
+    <th>ИНН</th>
+    <th>СНИЛС</th>
+    <th>Вод. удостоверение</th>
+    <th>Заметка</th>
   </tr>
   
   <% @individuals.each do |person| %>
     <tr>
       <td><%= person["name"] %></td>
       <td><%= person["surname"] %></td>
-    </tr>
+      <td><%= person["passport"] %></td>
+      <td><%= person["tin"] %></td>
+      <td><%= person["snils"] %></td>
+      <td><%= person["driverlicence"] %></td>
+      <td><%= person["note"] %></td>
+      </tr>
   <% end %>
 </table>

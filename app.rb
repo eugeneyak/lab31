@@ -18,7 +18,11 @@ class App < Roda
       db.create.execute(
         r.params["name"].presence,
         r.params["surname"].presence,
-        "A", "A", "A", "A"
+        r.params["passport"].presence,
+        r.params["tin"].presence,
+        r.params["snils"].presence,
+        r.params["driverlicence"].presence,
+        r.params["note"].presence,
       )
     rescue Mysql2::Error => e
       r.session["errors"] = [e.message]

@@ -18,8 +18,8 @@ class DB
   
   def create
     client.prepare <<-SQL
-      INSERT INTO individuals (name, surname, passport, tin, snils, driverlicence)
-      VALUES (?,?,?,?,?,?)
+      INSERT INTO individuals (name, surname, passport, tin, snils, driverlicence, note)
+      VALUES (?,?,?,?,?,?,?)
     SQL
   end
 end
