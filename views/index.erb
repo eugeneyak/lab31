@@ -1,0 +1,42 @@
+<form method="post" action="/add">
+  <label for="name">Имя:</label>
+  <input type="text" name="name">
+
+  <label for="surname">Фамилия:</label>
+  <input type="text" name="surname">
+
+  <label for="passport">Паспорт:</label>
+  <input type="text" name="passport">
+
+  <label for="tin">ИНН:</label>
+  <input type="text" name="tin">
+
+  <label for="snils">СНИЛС:</label>
+  <input type="text" name="snils">
+
+  <label for="driverlicence">Водительское удостоверение:</label>
+  <input type="text" name="driverlicence">
+
+  <label for="note">Заметки:</label>
+  <input type="text" name="note">
+
+  <input type="submit" value="Submit">
+</form>
+
+<% @errors.each do |error| %>
+  <div><%= error %></div>
+<% end %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Surname</th>
+  </tr>
+  
+  <% @individuals.each do |person| %>
+    <tr>
+      <td><%= person["name"] %></td>
+      <td><%= person["surname"] %></td>
+    </tr>
+  <% end %>
+</table>
